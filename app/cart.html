@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина</title>
+  <link rel="stylesheet" href="../css/style.min.css">
+</head>
+
+<body>
+  <div class="modal-burger-menu ">
+    <img src="../images/icon-close-modal.svg" alt="close-modal" id="close-modal-burger">
+
+    <div class="burger-box">
+      <ul class="burger-link-menu">
+        <li class="animated-link burger-menu-link"><a href="index.html#aboutUs">О бренде</a></li>
+        <li class="animated-link burger-menu-link"><a href="index.html#catalog">Каталог</a></li>
+        <li class="animated-link burger-menu-link"><a href="index.html#subscribe">Подписка</a></li>
+        <li class="animated-link burger-menu-link"><a href="index.html#reviews">Отзывы</a></li>
+        <li class="animated-link burger-menu-link"><a href="index.html#contacts">Контакты</a></li>
+      </ul>
+      <ul class="burger-social-media">
+        <li><a href="https://www.instagram.com"><img src="../images/icon-instagram.svg" alt="instagram"></a>
+        </li>
+        <li><a href="https://ok.ru/"><img src="../images/icon-ok.svg" alt="ok"></a></li>
+        <li><a href="https://vk.com/"><img src="../images/icon-vk.svg" alt="vk"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <header>
+    <div class="nav-container">
+      <nav>
+        <ul class="nav-menu">
+          <li class="animated-link"><a href="index.html#aboutUs">О бренде</a></li>
+          <li class="animated-link"><a href="index.html#catalog">Каталог</a></li>
+          <li class="animated-link"><a href="index.html#subscribe">Подписка</a></li>
+          <li class="animated-link"><a href="index.html#reviews">Отзывы</a></li>
+          <li class="animated-link"><a href="index.html#contacts">Контакты</a></li>
+        </ul>
+        <a href="index.html" class="logo"><img src="../images/logo.svg" alt="logo"></a>
+        <div class="burger-menu"><img src="../images/icon-burger-menu.svg" alt="menu"></div>
+        <div class="header__nav-box">
+          <ul class="social-media">
+            <li><a href="https://www.instagram.com"><img src="../images/icon-instagram.svg" alt="instagram"></a></li>
+            <li><a href="https://ok.ru/"><img src="../images/icon-ok.svg" alt="ok"></a></li>
+            <li><a href="https://vk.com/"><img src="../images/icon-vk.svg" alt="vk"></a></li>
+          </ul>
+          <div class="header-functions">
+            <div class="function-question">
+              <a href="index.html#questions"><img src="../images/icon-question.svg" alt="question"></a>
+            </div>
+            <div class="function-cart">
+              <img src="../images/icon-cart.svg" alt="cart">
+              <div id="cart-count-products" class="count-products"><span>0</span></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <div class="cart-steps">
+    <div class="cart-step">
+      <div class="cart-step-text">
+        <div class="cart-step-ellipse"><img width="25" height="25" src="../images/icon-cart.svg" alt="cart"></div>
+        <p>Корзина</p>
+      </div>
+    </div>
+    <div class="cart-step-line"></div>
+
+    <div class="cart-step">
+      <div class="cart-step-text">
+        <div class="cart-step-ellipse step-off cart-step-delivery"><svg width="38" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.467 17.726h10.456a1.134 1.134 0 001.134-1.134l3.948-14.458A1.133 1.133 0 0027.858 1H10.72a1.14 1.14 0 00-1.141 1.134L6.204 16.592a1.134 1.134 0 001.134 1.134H8.81" stroke="#6B7280" stroke-width="2"/><path d="M26.953 17.726h-2.342l3.375-11.67h5.549a.574.574 0 01.438.202l2.417 4.253a.546.546 0 01.135.357l-2.248 6.858h-2.43M11.192 21c1.383 0 2.504-1.137 2.504-2.538 0-1.402-1.121-2.538-2.504-2.538s-2.505 1.136-2.505 2.538C8.688 19.863 9.81 21 11.192 21z" stroke="#6B7280" stroke-width="2"/><path d="M29.444 21c1.383 0 2.504-1.137 2.504-2.538 0-1.402-1.121-2.538-2.504-2.538s-2.505 1.136-2.505 2.538c0 1.401 1.122 2.538 2.505 2.538z" stroke="#6B7280" stroke-width="2"/><path d="M14.527 4.32H3.471m8.876 3.538h-7.81m8.599 3.982H1" stroke="#6B7280" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <p>Доставка</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <section class="cart-box cart-all-products">
+    <h3>Корзина</h3>
+    <div class="cart-element-list">
+    </div>
+
+    <div class="cart-result">
+      <div class="cart-result-count">
+        <h5>Итого</h5>
+        <p><span id="cart-count-items"></span> шт</p>
+      </div>
+      <div class="cart-result-price">
+        <h4><span id="cart-result-price-h4"></span> ₽</h4>
+      </div>
+    </div>
+
+    <a href="#" class="btn1" onclick="pageBuy()">Продолжить </a>
+  </section>
+
+  <section class="cart-box cart-delivery">
+    <h3>Доставка</h3>
+    <form id="order-form">
+      <label for="fio">ФИО</label>
+      <input type="text" placeholder="Иванов Иван Иванович" required id="fio">
+      <label for="tel">Телефон</label>
+      <input type="tel" placeholder="+ (900) 211-23-23" required id="tel">
+      <label for="adress">Адрес доставки</label>
+      <input type="text" id="adress" required placeholder="г. Архангельск, ул. Галушина, д.2">
+      <div class="cart-btns">
+        <button class="btn2" type="button" onclick="prevPage()">Назад</button>
+        <button class="btn1" type="submit">Оплатить</button>
+      </div>
+    </form>
+  </section>
+
+
+
+
+
+
+
+  <footer id="contacts" class="footer-cart-page">
+    <div class="footer-container">
+      <div class="footer-nav">
+        <h3>Навигация по сайту</h3>
+        <ul class="footer-nav-menu">
+          <li><a href="#top">Главная</a></li>
+          <li><a href="#aboutUs">О бренде</a></li>
+          <li><a href="#catalog">Каталог</a></li>
+          <li><a href="#subscribe">Подписка</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#questions">Помощь</a></li>
+          <li><a href="../cart.html">Корзина</a></li>
+        </ul>
+      </div>
+      <div class="footer-contacts-menu">
+        <h3>Контакты</h3>
+        <div class="footer-contact">
+          <img src="../images/icon-tel.svg" alt="tel">
+          <a href="tel:78008227722">7 (800) 822-77-22</a>
+        </div>
+        <div class="footer-contact">
+          <img src="../images/icon-time.svg" alt="time">
+          <p>Работаем с 7:00 до 22:00</p>
+        </div>
+        <div class="footer-contact">
+          <img src="../images/icon-email.svg" alt="email">
+          <a href="mailto:shop-nike@gmail.com">shop-nike@gmail.com</a>
+        </div>
+      </div>
+      <div class="footer-about">
+        <h3>НИКА</h3>
+        <p>НИКА — мировой лидер в области спортивной обуви, одежды и аксессуаров. Мы вдохновляем спортсменов по
+          всему миру достигать большего с помощью инновационных технологий и современного дизайна. Nike
+          сочетает стиль, комфорт и качество, чтобы вы чувствовали уверенность в каждом движении — на
+          тренировке и в повседневной жизни.</p>
+        <ul class="footer-social-media">
+          <li><a href="https://www.instagram.com"><img src="../images/icon-instagram.svg" alt="instagram"></a>
+          </li>
+          <li><a href="https://ok.ru/"><img src="../images/icon-ok.svg" alt="ok"></a></li>
+          <li><a href="https://vk.com/"><img src="../images/icon-vk.svg" alt="vk"></a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copyright">© 2025 Все права защищены</p>
+  </footer>
+
+  <script src="../js/cart.js"></script>
+</body>
+
+</html>

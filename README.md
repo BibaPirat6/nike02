@@ -1,4 +1,5 @@
 В сборке gulp использовались следующие плагины:gulp, gulp-sass, gulp-uglify-es, gulp-concat, browser-sync, gulp-autoprefixer, gulp-clean, gulp-imagemin, gulp-newer, gulp-include, gulp-rename.
+
 Какие задачи выполяет gulp: 
   1. gulp styles - минифицирует scss в css в 1 строку
   2. gulp scripts - минифицирует js в 1 строку
@@ -7,6 +8,7 @@
   5. gulp pages - соединяет компоненты в 1 html файл
   6. gulp - запуск всех вышеперечисленных функций
   7. gulp build - собирает проект
+  
 JS-фичи:
   1. На главном экране переключается изображения кроссовок по картинке/по кнопке
   2. Также можно добавить в корзину главный товар/товары из каталога
